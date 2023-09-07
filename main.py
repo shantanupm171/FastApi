@@ -76,7 +76,3 @@ def delete_todo(todo_id: int, db = Depends(get_db)):
     db.delete(db_todo)
     db.commit()
     return db_todo
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, port=8000)
